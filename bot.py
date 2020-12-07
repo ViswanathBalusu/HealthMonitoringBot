@@ -14,8 +14,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Stages
-USERS=[1322746439,487596381,1300119173]
-TOKEN="1416260313:AAG6LLlSu7oYi7eZ8DtqEA8LIC3y01v7IgQ"
+USERS=[]
+TOKEN=""
 FIRST= range(1)
 # Callback data
 EXIT, BACK, PAT, ONE, TWO, THREE= range(6)
@@ -87,7 +87,7 @@ def two(update,context):
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    a,time=readthingspeakall(3,'K5Z9ON9FSY09W810','1214520')
+    a,time=readthingspeakall(3,'','')
     if int(a[2]) == 1:
         status='Critical ⚠️'
     else:
@@ -106,7 +106,7 @@ def three(update,context):
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    a,time=readthingspeakall(3,'9KSTC84VSBLWLDIK','1214522')
+    a,time=readthingspeakall(3,'','')
     if int(a[2]) == 1:
         status='Critical ⚠️'
     else:
